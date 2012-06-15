@@ -4,6 +4,14 @@ A Ruby wrapper for the Namba API. The full API description is available [here][]
 
 [here]: http://dev.namba.kg/api_description.php
 
+## Installation
+
+    gem install namba
+
+Or put to your `Gemfile`
+
+    gem "namba"
+
 ## Usage
 
     require 'namba'
