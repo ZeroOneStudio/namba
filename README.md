@@ -30,6 +30,7 @@ Eg.:
     n.get_user_info("puzanov")
 
 Leave `name` parameter blank to get information about configured user. Eg.:
+
     n.get_user_info()
 
 ## Methods dealing with personal stuff only
