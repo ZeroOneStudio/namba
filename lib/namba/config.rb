@@ -21,8 +21,8 @@ module Namba
         s.username = "" if s.username.nil? 
         s.password = "" if s.password.nil? 
         s.locale = :kg if s.locale.nil? 
-        raise ConfigurationError, "Available locales are only 'kg' and 'kz'" unless [:kg, :kz].include?(self.locale)
       end
+      raise ConfigurationError, "Available locales are only 'kg' and 'kz'" unless [:kg, :kz].include?(self.locale)
     end
 
     def options
