@@ -1,5 +1,7 @@
 ## The Namba Ruby gem
 
+[![Build Status](https://secure.travis-ci.org/ZeroOneStudio/namba.png)](http://travis-ci.org/ZeroOneStudio/namba)
+
 A Ruby wrapper for the Namba API. The full API description is available [here][]
 
 [here]: http://dev.namba.kg/api_description.php
