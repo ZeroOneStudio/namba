@@ -40,6 +40,6 @@ describe Namba do
       Namba.configure do |config|
         config.locale = :ru
       end 
-    }.should raise_error
+    }.should raise_error(Namba::ConfigurationError, "Available locales are only 'kg' and 'kz'")
   end
 end
