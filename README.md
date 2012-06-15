@@ -16,7 +16,7 @@ A Ruby wrapper for the Namba API. The full API description is available [here][]
 
     n = Namba.new()
 
-Use `:kz` locale if you want to access [nambakz][] API. Default value is `:kg`
+Use `:kz` locale if you want to access [namba.kz][] API. Default value is `:kg`
 
 ## Methods spread on all Namba API
 
@@ -40,7 +40,7 @@ Leave `name` parameter blank to get information about configured user. Eg.:
     n.get_new_mail_count # returns count of unread messages
     n.get_last_mail # returns list of inbox messages ordered by creation date. 20 messages is maximum
 
-[nambakz]: http://www.namba.kz
+[namba.kz]: http://www.namba.kz
 ## Licence
 
 MIT License Copyright (c) 2012 ZERO.ONE
