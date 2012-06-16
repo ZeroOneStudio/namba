@@ -3,8 +3,8 @@ $:.push File.expand_path("../lib", __FILE__)
 require "namba/version"
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Sergey Kishenin"]
-  gem.email         = ["sergey.kishenin@gmail.com"]
+  gem.authors       = ["Sergey Kishenin", "Michael Romanenko"]
+  gem.email         = ["sergey.kishenin@gmail.com", "michael@romanenko.kg"]
   gem.description   = %q{Ruby wrapper for Namba API}
   gem.summary       = %q{Ruby wrapper for Namba API}
   gem.homepage      = "https://github.com/ZeroOneStudio/namba"

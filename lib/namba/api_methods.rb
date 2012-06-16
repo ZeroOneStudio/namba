@@ -20,7 +20,7 @@ module Namba
     end
 
     def set_status text
-      post_data_to "http://api.namba.#{self.locale}/setStatus.php", { username: self.username, password: self.password, status: text }
+      post_data_to "http://api.namba.#{self.locale}/setStatus.php", { :username => self.username, :password => self.password, :status => text }
     end
 
     def get_events
@@ -43,7 +43,7 @@ private
       MultiJson.decode(response.body)
     end
 
-    def post_data_to url, params = { username: self.username, password: self.password }
+    def post_data_to url, params = { :username => self.username, :password => self.password }
       response = Net::HTTP.post_form(URI.parse(url), params)
       raise InvalidResponseError, "Invalid response from service" unless response.code == "200"
       MultiJson.decode(response.body)
