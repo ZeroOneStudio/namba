@@ -42,4 +42,18 @@ describe Namba do
       end 
     }.should raise_error(Namba::ConfigurationError, "Available locales are only 'kg' and 'kz'")
   end
+  
+  it "should raise Invalid Response Error when status code is not 200" do
+    Namba.configure do |config|
+      config.username = "name"
+      config.password = "secret"
+      config.locale = :kz
+    end
+
+    n = Namba.new()
+    
+    expect {
+      n.send(:get_response_from, "http://api.namba.#{n.locale}/404")
+    }.should raise_error(Namba::InvalidResponseError, "Invalid response from service")
+  end
 end
