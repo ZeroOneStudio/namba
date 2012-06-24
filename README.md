@@ -2,7 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/ZeroOneStudio/namba.png)](http://travis-ci.org/ZeroOneStudio/namba)
 
-A Ruby wrapper for the Namba API. The full API description is available [here][]
+A Ruby wrapper for the Namba API. The full API description is available [here][].
 
 [here]: http://dev.namba.kg/api_description.php
 
@@ -28,6 +28,8 @@ Or put to your `Gemfile`
 
 Use `:kz` locale if you want to access [namba.kz][] API. Default value is `:kg`
 
+[namba.kz]: http://www.namba.kz
+
 ## Methods spread on all Namba API
 
     n.get_user_info(name) # returns specific user information
@@ -50,7 +52,14 @@ Leave `name` parameter blank to get information about configured user. Eg.:
     n.get_new_mail_count # returns count of unread messages
     n.get_last_mail # returns list of inbox messages ordered by creation date. 20 messages is maximum
 
-[namba.kz]: http://www.namba.kz
+## [Namba Comments][] Rails helper
+
+If you use namba gem with Rails you can easily create a comment widget. For example, in your *.erb template:
+
+    <%= namba_comments("tamasha", 4850) %> # where "tamasha" -- component_name, "4850" -- component_id (read more in Namba API docs)
+
+[Namba Comments]: http://dev.namba.kg/api_comments.php
+
 ## Licence
 
 MIT License Copyright (c) 2012 ZERO.ONE

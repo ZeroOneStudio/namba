@@ -11,7 +11,7 @@ module Namba
       opts = Namba::Config.options.merge(opts)
       Config::VALID_KEYS.each do |key|
         instance_variable_set("@#{key}".to_sym, opts[key])
-     end
+      end
     end
   end
 end
