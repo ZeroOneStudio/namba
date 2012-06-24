@@ -19,3 +19,12 @@ module Namba
 
   end
 end
+
+require 'namba/helpers/action_view_extension'
+require 'namba/hooks'
+
+# if not using Railtie, call `Namba::Hooks.init` directly
+if defined? Rails
+  require 'namba/railtie'
+  require 'namba/engine'
+end
