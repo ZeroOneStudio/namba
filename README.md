@@ -52,11 +52,25 @@ Leave `name` parameter blank to get information about configured user. Eg.:
     n.get_new_mail_count # returns count of unread messages
     n.get_last_mail # returns list of inbox messages ordered by creation date. 20 messages is maximum
 
-## Namba Comments Rails helper
+## Namba gem's Rails helpers
 
-If you use namba gem with Rails you can easily create a comment widget. For example, in your *.erb template:
+If you are using `namba` gem in your Rails app you can use some helpers in your *.erb template:
 
-    <%= namba_comments("tamasha", 4850) %> # where "tamasha" -- component_name, "4850" -- component_id
+### namba_comments
+
+    <%= namba_comments(component_name, component_id) %>
+
+Eg.:
+
+    <%= namba_comments("tamasha", 4850) %>
+
+### namba_share
+
+    <%= namba_share(component_name, component_id) %>
+
+Eg.:
+
+    <%= namba_share("kyrnet", 1) %>    
 
 About `component_name` and `component_id` read more at [Namba Comments docs][]
 
