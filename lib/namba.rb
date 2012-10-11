@@ -8,8 +8,8 @@ module Namba
   class << self
 
     # Alias for Namba::Client.new()
-    def new(opts = {})
-      Namba::Client.new(opts)
+    def new
+      Namba::Client.new
     end
 
     # Alias for Namba::Config.configure 
