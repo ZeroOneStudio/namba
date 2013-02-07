@@ -2,6 +2,12 @@ require "namba/version"
 require 'namba/client'
 require 'namba/config'
 
+if defined? Rails
+  require 'namba/railtie'
+  require 'namba/helpers/action_view_extension'
+end
+
+
 module Namba
   extend Config
   
@@ -18,13 +24,4 @@ module Namba
     end
 
   end
-end
-
-require 'namba/helpers/action_view_extension'
-require 'namba/hooks'
-
-# if not using Railtie, call `Namba::Hooks.init` directly
-if defined? Rails
-  require 'namba/railtie'
-  require 'namba/engine'
-end
+end  
