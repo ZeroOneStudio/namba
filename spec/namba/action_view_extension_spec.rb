@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+require 'namba/helpers/action_view_extension'
 
 describe Namba::ActionViewExtension do
 

@@ -1,12 +1,7 @@
 require "namba/version"
 require 'namba/client'
 require 'namba/config'
-
-if defined? Rails
-  require 'namba/railtie'
-  require 'namba/helpers/action_view_extension'
-end
-
+require 'namba/railtie' if defined? Rails
 
 module Namba
   extend Config
