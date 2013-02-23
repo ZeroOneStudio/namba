@@ -22,7 +22,7 @@ module Namba
         s.password = "" if s.password.nil? 
         s.locale = :kg if s.locale.nil? 
       end
-      raise ConfigurationError, "Available locales are only 'kg' and 'kz'" unless [:kg, :kz].include?(self.locale)
+      raise ConfigurationError, "Available locales are only 'kg' and 'net'" unless [:kg, :net].include?(self.locale)
     end
 
     def options
