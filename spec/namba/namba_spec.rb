@@ -40,7 +40,7 @@ describe Namba do
       Namba.configure do |config|
         config.locale = :ru
       end 
-    }.should raise_error(Namba::ConfigurationError, "Available locales are only 'kg' and 'kz'")
+    }.to raise_error(Namba::ConfigurationError, "Available locales are only 'kg' and 'kz'")
   end
   
   it "should raise Invalid Response Error when status code is not 200" do
@@ -54,6 +54,6 @@ describe Namba do
     
     expect {
       n.send(:get_response_from, "http://api.namba.#{n.locale}/404")
-    }.should raise_error(Namba::InvalidResponseError, "Invalid response from service")
+    }.to raise_error(Namba::InvalidResponseError, "Invalid response from service")
   end
 end
