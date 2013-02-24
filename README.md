@@ -27,9 +27,9 @@ Or put to your `Gemfile`
 
     n = Namba.new()
 
-Use `:kz` locale if you want to access [namba.kz][] API. Default value is `:kg`
+Use `:net` locale if you want to access [namba.net][] API. Default value is `:kg`
 
-[namba.kz]: http://www.namba.kz
+[namba.net]: http://www.namba.net
 
 ## Methods spread on all Namba API
 
