@@ -1,5 +1,6 @@
 ## The Namba Ruby gem
 
+[![Gem Version](https://badge.fury.io/rb/namba.png)](http://badge.fury.io/rb/namba)
 [![Build Status](https://secure.travis-ci.org/ZeroOneStudio/namba.png)](http://travis-ci.org/ZeroOneStudio/namba)
 [![Code Climate](https://codeclimate.com/github/ZeroOneStudio/namba.png)](https://codeclimate.com/github/ZeroOneStudio/namba)
 
