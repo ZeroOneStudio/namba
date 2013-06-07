@@ -80,7 +80,7 @@ About `component_name` and `component_id` read more at [Namba Comments docs][]
 
 ## Licence
 
-MIT License Copyright (c) 2012 [ZERO.ONE][]
+MIT License Copyright (c) 2013 [ZERO.ONE][]
 
 [ZERO.ONE]: http://www.zeroone.st
 
