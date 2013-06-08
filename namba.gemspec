@@ -16,10 +16,11 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Namba::VERSION
 
-  gem.add_runtime_dependency 'multi_json'
+  gem.add_runtime_dependency "multi_json"
 
-  gem.add_development_dependency 'rspec', '~> 2.7.0'
-  gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'webmock'
-  gem.add_development_dependency 'rack-test'
+  gem.add_development_dependency "rspec", "~> 2.7.0"
+  gem.add_development_dependency "guard"
+  gem.add_development_dependency "guard-rspec"
+  gem.add_development_dependency "webmock"
+  gem.add_development_dependency "rack-test"
 end
