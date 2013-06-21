@@ -4,6 +4,7 @@
 [![Build Status](https://secure.travis-ci.org/ZeroOneStudio/namba.png)](http://travis-ci.org/ZeroOneStudio/namba)
 [![Code Climate](https://codeclimate.com/github/ZeroOneStudio/namba.png)](https://codeclimate.com/github/ZeroOneStudio/namba)
 [![Coverage Status](https://coveralls.io/repos/ZeroOneStudio/namba/badge.png)](https://coveralls.io/r/ZeroOneStudio/namba)
+[![Dependency Status](https://gemnasium.com/ZeroOneStudio/namba.png)](https://gemnasium.com/ZeroOneStudio/namba)
 
 A Ruby wrapper for the Namba API. The full API description is available [here][].
 
