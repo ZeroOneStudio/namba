@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency "multi_json"
 
-  gem.add_development_dependency "rspec", "~> 2.7.0"
+  gem.add_development_dependency "rspec"
   gem.add_development_dependency "rake"
   gem.add_development_dependency "guard"
   gem.add_development_dependency "guard-rspec"
