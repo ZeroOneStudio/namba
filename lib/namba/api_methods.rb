@@ -8,15 +8,17 @@ module Namba
     end
 
     def get_user_video name = self.username
-      get_response_from "http://api.namba.#{self.locale}/getVideo.php?username=" + name
+      response = get_response_from "http://api.namba.#{self.locale}/getVideo.php?username=" + name
+      return [] if response.is_a?(NilClass)
     end
 
     def get_user_photo name = self.username
-      get_response_from "http://api.namba.#{self.locale}/getPhoto.php?username=" + name
+      response = get_response_from "http://api.namba.#{self.locale}/getPhoto.php?username=" + name
+      return [] if response.is_a?(NilClass)
     end
 
     def get_friends_list name = self.username
-      get_response_from "http://api.namba.#{self.locale}/friends.php?username=" + name
+      response = get_response_from "http://api.namba.#{self.locale}/friends.php?username=" + name
     end
 
     def set_status text
