@@ -41,14 +41,21 @@ private
 
     def get_response_from url
       response = Net::HTTP.get_response(URI.parse(url))
-      raise InvalidResponseError, "Invalid response from service" unless response.code == "200"
-      MultiJson.decode(response.body)
+      raise_or_return response
     end
 
     def post_data_to url, params = { :username => self.username, :password => self.password }
       response = Net::HTTP.post_form(URI.parse(url), params)
+      raise_or_return response
+    end
+
+    def raise_or_return response
       raise InvalidResponseError, "Invalid response from service" unless response.code == "200"
-      MultiJson.decode(response.body)
+      if response.body == "null"
+        return nil
+      else
+        MultiJson.decode(response.body)
+      end
     end
   end
 end
