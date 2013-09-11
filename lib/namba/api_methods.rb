@@ -7,18 +7,14 @@ module Namba
       get_response_from "http://api.namba.#{self.locale}/getUserInfo.php?username=" + name
     end
 
-    def get_user_video name = self.username
-      response = get_response_from "http://api.namba.#{self.locale}/getVideo.php?username=" + name
-      return [] if response.is_a?(NilClass)
-    end
-
-    def get_user_photo name = self.username
-      response = get_response_from "http://api.namba.#{self.locale}/getPhoto.php?username=" + name
-      return [] if response.is_a?(NilClass)
+    %w(photo video).map do |key|
+      define_method "get_user_#{key}" do |name = self.username|
+        response = get_response_from "http://api.namba.#{self.locale}/get#{key.capitalize}.php?username=" + name
+      end
     end
 
     def get_friends_list name = self.username
-      response = get_response_from "http://api.namba.#{self.locale}/friends.php?username=" + name
+      get_response_from "http://api.namba.#{self.locale}/friends.php?username=" + name
     end
 
     def set_status text
@@ -52,7 +48,7 @@ private
     def raise_or_return response
       raise InvalidResponseError, "Invalid response from service" unless response.code == "200"
       if response.body == "null"
-        return nil
+        return []
       else
         MultiJson.decode(response.body)
       end
