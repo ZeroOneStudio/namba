@@ -8,8 +8,7 @@ module Namba
     end
 
     %w(photo video).map do |key|
-      define_method "get_user_#{key}" do |name|
-        name ||= self.username
+      define_method "get_user_#{key}" do |name = self.username|
         response = get_response_from "http://api.namba.#{self.locale}/get#{key.capitalize}.php?username=" + name
       end
     end
