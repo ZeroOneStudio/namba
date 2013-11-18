@@ -15,6 +15,8 @@ Gem::Specification.new do |gem|
   gem.name          = "namba"
   gem.require_paths = ["lib"]
   gem.version       = Namba::VERSION
+  
+  gem.license       = "MIT"
 
   gem.add_runtime_dependency "multi_json"
 
