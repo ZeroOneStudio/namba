@@ -86,3 +86,7 @@ MIT License Copyright (c) 2012-2013 [ZERO.ONE][]
 
 [ZERO.ONE]: http://www.zeroone.st
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ZeroOneStudio/namba/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
